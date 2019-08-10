@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145403623-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-145403623-1');
+  </script>
+    <title>Venkatesh Mudaliar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="Venkatesh Mudaliar">
+    <meta name="author" content="Venkatesh Mudaliar">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Profile Page">
+    <meta property="og:description" content="Profile, Programmer">
+    <link rel="canonical" href="../index.html">
+    <meta property="og:url" content="../index.html">
+    <meta property="og:site_name" content="Venkatesh Mudaliar">
+    <meta property="og:image" content="img/og_thumbnail.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="@venkymudaliar">
+    <meta name="twitter:title" content="Venkatesh Mudaliar">
+    <meta name="twitter:image" content="img/avatar.png">
+    <meta name="twitter:image:alt" content="venkymudaliar">
+    <link href="../img/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/venky.css">
+    <link href="../assets/external/widget.css" rel="stylesheet">
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"Website","name":"Venkatesh Mudaliar","headline":"Venkatesh Mudaliar","author":{"@type":"Person","name":"Venkatesh Mudaliar"},"description":"Programmer, Neophyte","url":"https://venkyymudaliar.github.io/"}
+      
+    </script>
+    <script src="../assets/9bdc906322.js"></script>
+  </head>
+  <body onload="document.body.classList.add('loaded')">
+    <!--Display Top Navigation Bar-->
+    
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand"><a class="navbar-item" href="../index.html"><img src="../img/avatar.png" alt="Venkatesh Mudaliar" height="48"> <h2 style="padding: 10px;"> Venkatesh Mudaliar</h2></a></div>
+      </div>
+    </nav>
+    
+    <!--
+    <section class="hero is-white has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column">
+              <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Venkatesh Mudaliar</h1>
+              <h2 class="subtitle is-size-4-desktop">Perpetual Neophyte</h2><img class="avatar" src="../img/avatar.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+    
+    <section class="section projects is-medium is-white has-text-centered" >
+      <div class="container is-narrow">
+        <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Generating Poems Using RNN</h1>
+        <div style="text-align: left;">
+
+            <h2>ABSTRACT:</h2>
+						The project utilizes the concept of RNN(Recurrent Neural Network) along with the Word Embeddings. 
+						Word Embeddings also have known as Word Vectors are used in traditional NLP(Natural Language Processing) for Sentiment Analysis, Text Prediction, Text Classification and such applications.</p>
+						<hr>
+
+						<h2>METHODOLOGY:</h2>
+						Word Embeddings are vector representations of individual words. The sequences of these vector indexes represent a sentence. A Vector matrix for individual word is generated. 
+						Word vector is of size V*D where V=Vocabulary size and D=Vector Dimension.
+						The closest word for the given input vector is determined using distances like Euclidean distance or Cosine distance.
+						The process of selection iteratively loops over the collection of word vectors and finds the word most close to the input vector.
+						<br><br>
+						In the model developed for generating a poem, the concept of predicting the most appropriate next word is used. The model calculates the Softmax values with the probability of the next word coming up. 
+						To make sure the initial words that are the first words of each sentence is not repeated a dedicated word matrix is sampled out from the word vectors. The words from this word matrix are used to get a new word for a line each time.
+						<br>
+						
+					
+						
+						<hr>
+						<h2>DATASET USED:</h2>
+						Cornell Movie--Dialogs Corpus
+						The dataset used for training here was a collection of some poems I wrote in a text file. The text file has around 500 lines.
+						<hr>
+						
+						<h2>PROGRAMMATIC APPROACH:</h2>
+						<ol> 
+						  <li id="listitem">Data Preprocessing</li>
+              The data is converted to lowercase representation. The punctuations are removed and the words in the form of tokens are obtained by splitting the sentence by whitespace. These tokens are added to Word2Index dictionary. The sentences are saved in the form of a sequence of indexes.
+						
+						  <li id="listitem">Create RNN</li>
+              The dimensions of word embeddings, hidden layers size and vocabulary size are initialized. The number of lines in the output poem along is specified in the generate() method. The words are predicted after the initial word selected for a sentence.
+						
+						  <li id="listitem">Train Model</li>
+              RNN generated in the second step is called and the model is fit with parameters like Learning Rate, activation function, number of epochs. The file containing the weights generated is saved.
+						
+						  <li id="listitem">Generate Poem</li>
+              The weights file is called and the generated function from RNN is called to return the predicted words forming a sentence in a poem.
+						</ol>
+						<hr>
+
+						
+						<h2>OUTPUT</h2>
+						<img src="images/1.jpg" class="projectimages">
+						<h5 class="projectimagescaption">A poem generated with 'Verse-Bot'</h5>
+						<hr>
+
+						<h2>SOURCE CODE</h2>
+						I picked this project while I was taking a course "Deep Learning: Recurrent Neural Networks in Python" from Udemy. I would like to credit <a href="https://www.udemy.com/user/lazy-programmer/">Lazy Programmer Inc.</a> for valuable information.
+						<br>
+						The source code for the project along with detailed documentation in form of comments is provided in the Github Repository. 
+            The poems can be colelcted from the internet and pasted in a simple text file. The file can then be imported into the project.<br>
+            <i>Link:</i>   <a href="https://github.com/venkyymudaliar/Poem-Generation-Using-Deep-Learning.git" class="codelinks">Generating Poems using RNN</a> 
+						<br>
+						<br>
+						
+        </div>
+          
+      
+        <div class="columns is-centered">
+          <div class="column"><a class="button is-primary is-outlined is-rounded is-medium" href="../projects.html"><span class="icon"><i class="fas fa-angle-left"></i></span><span>Projects</span></a></div>
+          <div class="column"><a class="button is-primary is-outlined is-rounded is-medium" href="../index.html"><span class="icon"><i class="fas fa-home"></i></span><span>Home</span></a></div>
+          
+        
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="section is-primary is-small has-text-centered">
+      <div class="container is-narrow">
+        <div class="columns is-centered"> 
+          <div class="column is-one-third">
+            <h1 class="title is-size-4-touch">Feel free to connect!</h1>
+          </div>
+        </div>
+        <div class="social-icons">
+          <p class="field">
+            <a class="button is-medium" href="https://twitter.com/venkymudaliar?lang=en" target="_blank"><span class="icon is-small"><i class="fab fa-twitter fa-fw"></i></span></a>
+            <a class="button is-medium" href="https://www.linkedin.com/in/venkatesh-mudaliar/" target="_blank"><span class="icon is-small"><i class="fab fa-linkedin-in fa-fw"></i></span></a>
+            <a class="button is-medium" href="https://github.com/venkyymudaliar" target="_blank"><span class="icon is-small"><i class="fab fa-github"></i></span></a>
+            <a class="button is-medium" href="https://stackoverflow.com/users/11867035/venkatesh-mudaliar" target="_blank"><span class="icon is-small"><i class="fab fa-stack-overflow"></i></span></a>
+            <a class="button is-medium" href="https://www.youtube.com/channel/UC3eoy3itkCF8hxH8iK2dTYA" target="_blank"><span class="icon is-small"><i class="fab fa-youtube"></i></span></a>
+          </p>
+        </div>
+        <div class="copyright"><i class="fas fa-mobile-alt"></i> +91-9075833468</div>
+        <br>
+        <div class="copyright"><i class="far fa-envelope"></i> venkateshmudaliar08@gmail.com</div>
+      </div>
+    </footer>
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+    </script><script src="../js/main-min.js"></script>
+    <script src="../assets/external/widget.js" type="text/javascript"></script>
+    <script src="../assets/ahoy.js" async="" defer=""></script>
+  </body>
+
+
+</html>

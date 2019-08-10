@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145403623-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-145403623-1');
+  </script>
+    <title>Venkatesh Mudaliar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="Venkatesh Mudaliar">
+    <meta name="author" content="Venkatesh Mudaliar">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Profile Page">
+    <meta property="og:description" content="Profile, Programmer">
+    <link rel="canonical" href="../index.html">
+    <meta property="og:url" content="../index.html">
+    <meta property="og:site_name" content="Venkatesh Mudaliar">
+    <meta property="og:image" content="img/og_thumbnail.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="@venkymudaliar">
+    <meta name="twitter:title" content="Venkatesh Mudaliar">
+    <meta name="twitter:image" content="img/avatar.png">
+    <meta name="twitter:image:alt" content="venkymudaliar">
+    <link href="../img/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/venky.css">
+    <link href="../assets/external/widget.css" rel="stylesheet">
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"Website","name":"Venkatesh Mudaliar","headline":"Venkatesh Mudaliar","author":{"@type":"Person","name":"Venkatesh Mudaliar"},"description":"Programmer, Neophyte","url":"https://venkyymudaliar.github.io/"}
+      
+    </script>
+    <script src="../assets/9bdc906322.js"></script>
+  </head>
+  <body onload="document.body.classList.add('loaded')">
+    <!--Display Top Navigation Bar-->
+    
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand"><a class="navbar-item" href="../index.html"><img src="../img/avatar.png" alt="Venkatesh Mudaliar" height="48"> <h2 style="padding: 10px;">Venkatesh Mudaliar</h2></a></div>
+      </div>
+    </nav>
+    
+    <!--
+    <section class="hero is-white has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column">
+              <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Venkatesh Mudaliar</h1>
+              <h2 class="subtitle is-size-4-desktop">Perpetual Neophyte</h2><img class="avatar" src="../img/avatar.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+    
+    <section class="section projects is-medium is-white has-text-centered" >
+      <div class="container is-narrow">
+        <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">LSTM Based Ensemble Network To Enhance The Learning Of Long-Term Dependencies In Chatbot</h1>
+        <div style="text-align: left;">
+
+            <h2>ABSTRACT:</h2>
+						With the advent of Artificial Intelligence, chatbots have evolved from being mere rule-based models to more sophisticated models which are not only inclined towards the humane aspect of basic conversations but also tend to mature over experiences. One of the most striking features of the existing chatbot systems is their ability to maintain and nurture specific features and contexts of the conversations enabling them to have a humanly touch throughout the experience. The project proposed a hybrid Long Short Term Memory based Ensemble Network classification model to preserve the continuance of the context. The proposed model utilizes a defined number of Long Short Term Memory Networks as part of the assembled model working in unison to generate the collective prediction class for the input query processed.</p>
+						<img src="images/1 LSTM ensemble mode.png" class="projectimages">
+						<h5 class="projectimagescaption">Basic Ensemble Structure</h5>
+						<hr>
+
+						<h2>METHODOLOGY:</h2>
+						The idea is to define a number of LSTM networks with variation in hyperparameters as part of the ensemble model. The member models work together in parallel and their individual outputs are aggregated to generate the output of the overall model. 
+						The primary benefit of the Ensemble Model comes in the form of better generalization ability. The proposed model includes Training & Testing phases.
+						<br>
+						
+						<ol>
+						<li id="listitem">Training Phase:</li>
+						A definite number of LSTM networks are generated and trained using variations in training data. The models with lower accuracy are filtered out.
+						<ul>	
+								<li>a. Parameters like number of LSTM network, Maximum number of hidden layers, the maximum number of neurons and accuracy threshold for each LSTM model are initialized.</li>
+								<li>b. LSTM models are generated.</li>
+								<li>c. The training dataset is split and the training is performed for LSTM models. A portion of dataset is used for testing and the LSTM models having lower accuracy than the threshold are dropped.</li>
+						</ul>
+						<img src="images/2 Variations of LSTM.png" class="projectimages">
+						<h5 class="projectimagescaption">Variations in LSTM</h5>
+						<li id="listitem">Testing Phase:</li> 
+						The trained model is applied to the testing dataset.
+						<ul>
+							<li>a. The testing dataset is fed into LSTM models.</li>
+							<li>b. Individual outputs from the model are multiplied with corresponding weights and a weighted average of the sum of total outputs is calculated.</li>
+							<li>c. The weighted average is used to predict the response class.</li>
+						</ul>
+						</ol>
+						
+						<hr>
+						<h2>DATASET USED:</h2>
+						Cornell Movie--Dialogs Corpus
+						The dataset contains 220,579 conversational exchanges between 10,292 pairs of movie characters. It involves 9,035 characters from 617 movies. All the files have field separator as " +++$+++ ". The project utilizes “movie_lines.txt” and “movie_conversations.txt” for training the model. ‘movie_conversations.txt’ contains the structure of conversations with the characterIDs of the characters involved in the conversations. ‘movie_lines.txt‘ contains the actual texts of the conversations with lineID and the characterIDs.
+						<hr>
+						
+						<h2>PROGRAMMATIC APPROACH:</h2>
+						<ol> 
+						<li id="listitem">Data Preprocessing</li>
+						The dataset is imported and corresponding dictionaries are created mapping line in conversation to its identifier. Dictionaries for questions and answers are also created. The questions and answers are cleaned to simplify the tokens.
+						<li id="listitem">Building seq2seq model</li>
+						The placeholders for model inputs are defined. Encoder RNN layer with parameters like Model Inputs, Input questions, targets are defined. Decoder RNN for carrying out the decoding the training dataset, decoding validation dataset is defined.
+						<li id="listitem">Training the Seq2Seq Model</li>
+						The Hyperparameters like epochs, batch size, Layers, Learning rate, etc are initialized and
+						The dataset is split into batches for training. After the training starts for each iteration, the Weights generated are stored as ‘chatbot_weights.ckpt’ checkpoint file. 
+						<img src="images/3 Training screen.png" class="projectimages">
+						<h5 class="projectimagescaption">The model during training</h5>
+						<li id="listitem">Testing</li>
+						The weights file is loaded for a session. The questions are preprocessed and the Seq2Seq model is called for execution. The response generated is returned for the input query. 
+						</ol>
+						<hr>
+
+						<h2>GRU OR LSTM?</h2>
+						The selection of an appropriate model between them depends on the key differences and the dataset. GRU exposes complete memory content without control gate when compared to controlled exposure of LSTM using Output gate.  LSTM doesn't control the amount of information flowing in from previous time steps while computing new memory content. On the other hand, GRU explicitly controls the influx of information while calculating new memory content using the Update gate. Comparison between LSTM and GRU for the model appropriate model selection is done over the dataset in 3 iterations. It was found that as the data points in the dataset were increased the performance of LSTM was better than GRU.
+						<hr>
+						<h2>CONCLUSION</h2>
+						<img src="images/5  chtbot op.jpg" class="projectimages">
+						<h5 class="projectimagescaption">Chatbot console output</h5>
+						
+						The project utilized the concept of Ensemble learning over the traditional approach of employing a single methodology to carry out the task of classification for answers in Chatbot. In addition to creating an Ensemble, the project focused on the concept of pruning as well to refine the individual LSTM models involved to improve the overall accuracy of the model. The project also compares the selection between LSTM and GRU as the element of memory for the Ensemble Network. In comparison, LSTM was found well suited for classification dealing with a large volume of the training dataset. 
+						
+						<br><br>The proposed LSTM based Ensemble Network architecture attempts at enhancing the user experience by providing a sense of continuance of context in a series of conversations. The algorithm does so by generalizing the features imperative to making the conversation humane.</p>
+						<hr>
+
+						<h2>SOURCE CODE</h2>
+						The source code for the project along with detailed documentation in form of comments is provided in the Github Repository. 
+						The 'movie_conversations' dataset is also provided in the same.<br>
+						<i>Link:</i>   <a href="https://github.com/venkyymudaliar/Chatbot-With-Deep-Learning.git" class="codelinks">Chatbot with Deep Learning</a> 
+						<br>
+						<br>
+						
+        </div>
+          
+      
+        <div class="columns is-centered">
+          <div class="column"><a class="button is-primary is-outlined is-rounded is-medium" href="../projects.html"><span class="icon"><i class="fas fa-angle-left"></i></span><span>Projects</span></a></div>
+          <div class="column"><a class="button is-primary is-outlined is-rounded is-medium" href="../index.html"><span class="icon"><i class="fas fa-home"></i></span><span>Home</span></a></div>
+        
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="section is-primary is-small has-text-centered">
+      <div class="container is-narrow">
+        <div class="columns is-centered"> 
+          <div class="column is-one-third">
+            <h1 class="title is-size-4-touch">Feel free to connect!</h1>
+          </div>
+        </div>
+        <div class="social-icons">
+          <p class="field">
+            <a class="button is-medium" href="https://twitter.com/venkymudaliar?lang=en" target="_blank"><span class="icon is-small"><i class="fab fa-twitter fa-fw"></i></span></a>
+            <a class="button is-medium" href="https://www.linkedin.com/in/venkatesh-mudaliar/" target="_blank"><span class="icon is-small"><i class="fab fa-linkedin-in fa-fw"></i></span></a>
+            <a class="button is-medium" href="https://github.com/venkyymudaliar" target="_blank"><span class="icon is-small"><i class="fab fa-github"></i></span></a>
+            <a class="button is-medium" href="https://stackoverflow.com/users/11867035/venkatesh-mudaliar" target="_blank"><span class="icon is-small"><i class="fab fa-stack-overflow"></i></span></a>
+            <a class="button is-medium" href="https://www.youtube.com/channel/UC3eoy3itkCF8hxH8iK2dTYA" target="_blank"><span class="icon is-small"><i class="fab fa-youtube"></i></span></a>
+          </p>
+        </div>
+        <div class="copyright"><i class="fas fa-mobile-alt"></i> +91-9075833468</div>
+        <br>
+        <div class="copyright"><i class="far fa-envelope"></i> venkateshmudaliar08@gmail.com</div>
+      </div>
+    </footer>
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+    </script><script src="../js/main-min.js"></script>
+    <script src="../assets/external/widget.js" type="text/javascript"></script>
+    <script src="../assets/ahoy.js" async="" defer=""></script>
+  </body>
+
+
+</html>

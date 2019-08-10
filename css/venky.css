@@ -1,0 +1,46 @@
+.projectimages
+{
+	height: 50%;
+	width: 50%;
+	display: block;
+  	margin-left: auto;
+ 	margin-right: auto;
+}
+
+.projectimagescaption
+{
+	text-align: center;
+}
+
+#listitem
+{
+	font-weight: bold;
+}
+
+.impwords
+{
+	font-weight: bold;
+}
+
+@font-face 
+{
+	font-family: lato;
+	src: url(../assets/Lato-Regular.ttf);
+}
+
+@font-face 
+{
+	font-family: europa;
+	src: url(../assets/europa-regular-webfont.ttf);
+}
+
+body
+{
+    opacity : 0;
+    transition : opacity 0.4s ease-in; 
+}
+
+.loaded 
+{
+   	opacity : 1;
+}
